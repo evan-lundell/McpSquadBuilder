@@ -1,0 +1,291 @@
+[
+	{
+		"name": "Baron Zemo",
+		"pointCost": 3,
+		"alterEgo": "Helmut Zemo",
+		"infinityGems": [],
+		"isRogue": false
+	},
+	{
+		"name": "Black Dwarf",
+		"pointCost": 4,
+		"alterEgo": "Black Dwarf",
+		"infinityGems": [],
+		"isRogue": false
+	},
+	{
+		"name": "Black Panther",
+		"pointCost": 4,
+		"alterEgo": "T'Challa",
+		"infinityGems": [],
+		"isRogue": false
+	},
+	{
+		"name": "Black Widow",
+		"pointCost": 2,
+		"alterEgo": "Natasha Romanoff",
+		"infinityGems": [],
+		"isRogue": false
+	},
+	{
+		"name": "Black Widow, Agent of S.H.I.E.L.D.",
+		"pointCost": 3,
+		"alterEgo": "Natasha Romanoff",
+		"infinityGems": [],
+		"isRogue": false
+	},
+	{
+		"name": "Captain America",
+		"pointCost": 4,
+		"alterEgo": "Steve Rodgers",
+		"infinityGems": [],
+		"isRogue": false
+	},
+	{
+		"name": "Captain Marvel",
+		"pointCost": 4,
+		"alterEgo": "Carol Danvers",
+		"infinityGems": [],
+		"isRogue": false
+	},
+	{
+		"name": "Corvus Glaive",
+		"pointCost": 4,
+		"alterEgo": "Corvus Glaive",
+		"infinityGems": [
+			{
+				"name": "Reality Gem",
+				"pointCost": 1
+			},
+			{
+				"name": "Time Gem",
+				"pointCost": 2
+			}
+		],
+		"isRogue": false
+	},
+	{
+		"name": "Crossbones",
+		"pointCost": 3,
+		"alterEgo": "Brock Rumlow",
+		"infinityGems": [],
+		"isRogue": false
+	},
+	{
+		"name": "Doctor Octopus",
+		"pointCost": 3,
+		"alterEgo": "Otto Octavius",
+		"infinityGems": [],
+		"isRogue": false
+	},
+	{
+		"name": "Drax the Destroyer",
+		"pointCost": 3,
+		"alterEgo": "Drax",
+		"infinityGems": [],
+		"isRogue": false
+	},
+	{
+		"name": "Ebony Maw",
+		"pointCost": 5,
+		"alterEgo": "Ebony Maw",
+		"infinityGems": [
+			{
+				"name": "Mind Gem",
+				"pointCost": 1
+			},
+			{
+				"name": "Space Gem",
+				"pointCost": 2
+			}
+		],
+		"isRogue": false
+	},
+	{
+		"name": "Gamora",
+		"pointCost": 4,
+		"alterEgo": "Gamora",
+		"infinityGems": [],
+		"isRogue": false
+	},
+	{
+		"name": "Groot",
+		"pointCost": 3,
+		"alterEgo": "I Am Groot",
+		"infinityGems": [],
+		"isRogue": false
+	},
+	{
+		"name": "Hawkeye",
+		"pointCost": 3,
+		"alterEgo": "Clinton Barton",
+		"infinityGems": [],
+		"isRogue": false
+	},
+	{
+		"name": "Hela, Queen of Hel",
+		"pointCost": 4,
+		"alterEgo": "Hela",
+		"infinityGems": [],
+		"isRogue": false
+	},
+	{
+		"name": "Hulk",
+		"pointCost": 6,
+		"alterEgo": "Bruce Banner",
+		"infinityGems": [],
+		"isRogue": false
+	},
+	{
+		"name": "Iron Man",
+		"pointCost": 3,
+		"alterEgo": "Tony Stark",
+		"infinityGems": [],
+		"isRogue": false
+	},
+	{
+		"name": "Killmonger",
+		"pointCost": 4,
+		"alterEgo": "N'Jadaka",
+		"infinityGems": [],
+		"isRogue": false
+	},
+	{
+		"name": "Loki, God of Mischief",
+		"pointCost": 4,
+		"alterEgo": "Loki Laufeyson",
+		"infinityGems": [
+			{
+				"name": "Mind Gem",
+				"pointCost": 1
+			},
+			{
+				"name": "Space Gem",
+				"pointCost": 2
+			}
+		],
+		"isRogue": false
+	},
+	{
+		"name": "Modok",
+		"pointCost": 5,
+		"alterEgo": "George Tarleton",
+		"infinityGems": [],
+		"isRogue": false
+	},
+	{
+		"name": "Nebula",
+		"pointCost": 2,
+		"alterEgo": "Nebula",
+		"infinityGems": [],
+		"isRogue": false
+	},
+	{
+		"name": "Okoye",
+		"pointCost": 2,
+		"alterEgo": "Okoye",
+		"infinityGems": [],
+		"isRogue": false
+	},
+	{
+		"name": "Proxima Midnight",
+		"pointCost": 3,
+		"alterEgo": "Proxima Midnight",
+		"infinityGems": [],
+		"isRogue": false
+	},
+	{
+		"name": "Red Skull",
+		"pointCost": 4,
+		"alterEgo": "Johann Schmidt",
+		"infinityGems": [],
+		"isRogue": false
+	},
+	{
+		"name": "Rocket Raccoon",
+		"pointCost": 2,
+		"alterEgo": "Rocket Raccoon",
+		"infinityGems": [],
+		"isRogue": false
+	},
+	{
+		"name": "Ronan the Accuser",
+		"pointCost": 4,
+		"alterEgo": "Ronan the Accuser",
+		"infinityGems": [
+			{
+				"name": "Power Gem",
+				"pointCost": 1
+			}
+		],
+		"isRogue": false
+	},
+	{
+		"name": "Shuri",
+		"pointCost": 3,
+		"alterEgo": "Shuri",
+		"infinityGems": [],
+		"isRogue": false
+	},
+	{
+		"name": "Spider-Man",
+		"pointCost": 4,
+		"alterEgo": "Peter Parker",
+		"infinityGems": [],
+		"isRogue": false
+	},
+	{
+		"name": "Star-Lord",
+		"pointCost": 3,
+		"alterEgo": "Peter Quill",
+		"infinityGems": [
+			{
+				"name": "Power Gem",
+				"pointCost": 1
+			}
+		],
+		"isRogue": false
+	},
+	{
+		"name": "Thor, Prince of Asgard",
+		"pointCost": 5,
+		"alterEgo": "Thor Odinson",
+		"infinityGems": [],
+		"isRogue": false
+	},
+	{
+		"name": "Ultron",
+		"pointCost": 4,
+		"alterEgo": "Ultron",
+		"infinityGems": [],
+		"isRogue": false
+	},
+	{
+		"name": "Valkyrie",
+		"pointCost": 3,
+		"alterEgo": "Brunhilde",
+		"infinityGems": [],
+		"isRogue": false
+	},
+	{
+		"name": "Venom",
+		"pointCost": 4,
+		"alterEgo": "Eddie Brock",
+		"infinityGems": [],
+		"isRogue": false
+	},
+	{
+		"name": "Vision",
+		"pointCost": 4,
+		"alterEgo": "Victor Shade",
+		"infinityGems": [],
+		"isRogue": false
+	},
+	{
+		"name": "Winter Soldier",
+		"pointCost": 3,
+		"alterEgo": "James \"Bucky\" Barnes",
+		"infinityGems": [],
+		"isRogue": true
+	}
+]

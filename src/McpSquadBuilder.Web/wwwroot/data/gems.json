@@ -1,0 +1,27 @@
+[
+	{
+		"name": "Mind Gem",
+		"pointCost": 1
+	},
+	{
+		"name": "Space Gem",
+		"pointCost": 2
+	},
+	{
+	
+		"name": "Reality Gem",
+		"pointCost": 1
+	},
+	{
+		"name": "Time Gem",
+		"pointCost": 2
+	}
+	{
+		"name": "Power Gem",
+		"pointCost": 1
+	},
+	{
+		"name": "Soul Gem",
+		"pointCost": 1
+	}
+]
