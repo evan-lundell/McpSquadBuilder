@@ -1,8 +1,116 @@
 ﻿@page "/"
+@inject HttpClient http
+@inject ISquadService squadService
 
-<h1>Hello, world!</h1>
+@if (SquadMembers == null)
+{
+    <em>Loading...</em>
+}
+else
+{
+    for (int i = 0; i < 10; i++)
+    {
+        var index = i;
+        <div>
+            <label>Character @(index + 1):</label>
+            <select @onchange="@(e => SetSelectedSquadMember(index, e.Value.ToString()))">
+                <option value="">Select a Squad Member...</option>
+                @foreach (var squadMember in SquadMembers)
+                {
+                    <option value="@squadMember.Name">@squadMember.Name</option>
+                }
+            </select>
+        </div>
+    }
+    <div>
+        <label>Filter:</label>
+        <select @bind="SelectedFilterId">
+            <option value="0">No Restrictions</option>
+            <option value="1">Affiliation Only</option>
+            <option value="2">Leader Only</option>
+        </select>
+    </div>
+    <div>
+        <label>Target Points:</label>
+        <input type="number" @bind="TargetPoints" />
+    </div>
+    <div>
+        <button type="button" @onclick="GetSquadsClick">Get Possible Squads</button>
+    </div>
 
-<h2>This is going to be a Marvel: Crisis Protocol Squad Builder!</h2>
+    @if (!string.IsNullOrWhiteSpace(ErrorMessage))
+    {
+        <div style="color: red;">
+            @ErrorMessage
+        </div>
+    }
 
-Welcome to your new app.
+    @if (PossibleSquads != null)
+    {
+        <div>
+            <p>Possible Squads:</p>
+            <ol>
+                @foreach (var possibleSquad in PossibleSquads)
+                {
+                    <li>@string.Join(", ", possibleSquad.Members.Select(m => m.Name))</li>
+                }
+            </ol>
+        </div>
+    }
+}
 
+@code {
+    private SquadMember[] SquadMembers;
+    private SquadMember[] Roster;
+    private IEnumerable<Squad> PossibleSquads;
+
+    private string ErrorMessage;
+    private string SelectedFilterId = "0";
+    private string TargetPoints;
+
+    protected async override Task OnInitializedAsync()
+    {
+        var characters = await http.GetFromJsonAsync<McpCharacter[]>("data/characters.json");
+        var gems = await http.GetFromJsonAsync<InfinityGem[]>("data/gems.json");
+
+        SquadMembers = characters.Cast<SquadMember>().Union(gems).ToArray();
+        Roster = new SquadMember[10];
+    }
+
+    private void SetSelectedSquadMember(int number, string squadMemberName)
+    {
+        Console.WriteLine($"Number: {number}, SquadMember: {squadMemberName}");
+        var squadMember = SquadMembers.FirstOrDefault(sm => sm.Name == squadMemberName);
+        Roster[number] = squadMember;
+    }
+
+    private void GetSquadsClick(MouseEventArgs e)
+    {
+        ErrorMessage = "";
+        if (Roster.Any(sm => sm == null))
+        {
+            ErrorMessage = "Not all roster slots have been filled.";
+            return;
+        }
+
+        if (Roster.GroupBy(sm => sm.Name).Any(g => g.Count() > 1))
+        {
+            ErrorMessage = "Roster has duplicate members";
+            return;
+        }
+
+        if (!int.TryParse(SelectedFilterId, out int selectedFilterId))
+        {
+            ErrorMessage = "Select a filter option";
+            return;
+        }
+
+        if (!int.TryParse(TargetPoints, out int targetPoints))
+        {
+            ErrorMessage = "Enter a target point value";
+            return;
+        }
+
+        PossibleSquads = squadService.GetPossibleSquads(Roster, targetPoints, (SquadOption)selectedFilterId);
+    }
+}

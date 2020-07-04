@@ -8,7 +8,7 @@ namespace McpSquadBuilder.Core.Models
     {
         public string Name { get; set; }
         public int PointCost { get; set; }
-        public virtual string UniqueIdentifier { get; }
+        public abstract string UniqueIdentifier { get; }
 
         public override bool Equals(object obj)
         {
@@ -19,5 +19,9 @@ namespace McpSquadBuilder.Core.Models
             return false;
         }
 
+        public override int GetHashCode()
+        {
+            return UniqueIdentifier.GetHashCode();
+        }
     }
 }

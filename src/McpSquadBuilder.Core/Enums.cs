@@ -6,8 +6,8 @@ namespace McpSquadBuilder.Core
 {
     public enum SquadOption
     {
-        NoRestrictions,
-        AffiliationOnly,
-        LeaderOnly
+        NoRestrictions = 0,
+        AffiliationOnly = 1,
+        LeaderOnly = 2
     }
 }
