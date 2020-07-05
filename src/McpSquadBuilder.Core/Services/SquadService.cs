@@ -110,7 +110,7 @@ namespace McpSquadBuilder.Core.Services
             }
         }
 
-        public IEnumerable<Affiliation> GetSquadAffiliations(List<SquadMember> members)
+        public IEnumerable<Affiliation> GetSquadAffiliations(IEnumerable<SquadMember> members)
         {
             var affiliationCount = new Dictionary<string, int>();
             var characterCount = 0;

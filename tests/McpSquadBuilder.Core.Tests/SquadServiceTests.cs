@@ -60,6 +60,24 @@ namespace McpSquadBuilder.Core.Tests
             Assert.Equal(expected, isSquadValid);
         }
 
+        [Theory]
+        [ClassData(typeof(AffiliationTestData))]
+        public void GetSquadAffiliations_VerifyAffiliations(IEnumerable<SquadMember> squad, IEnumerable<Affiliation> expectedAffiliations)
+        {
+            var squadService = new SquadService(TestData.Affiliations);
+            var affiliations = squadService.GetSquadAffiliations(squad);
+
+            if (affiliations.Count() == 0)
+            {
+                Assert.True(expectedAffiliations.Count() == 0);
+            }
+
+            foreach (var affiliation in expectedAffiliations)
+            {
+                Assert.Contains(affiliations, a => a.Name.Equals(affiliation.Name, StringComparison.OrdinalIgnoreCase));
+            }
+        }
+
         private SquadMember[] BuildRoster()
         {
             return new SquadMember[]

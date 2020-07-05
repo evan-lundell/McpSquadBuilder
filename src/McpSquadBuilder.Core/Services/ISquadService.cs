@@ -9,6 +9,6 @@ namespace McpSquadBuilder.Core.Services
     {
         IEnumerable<Squad> GetPossibleSquads(IEnumerable<SquadMember> roster, int targetPoints, SquadOption squadOption = SquadOption.LeaderOnly);
         bool IsSquadValid(Squad squad, SquadOption squadOption);
-        IEnumerable<Affiliation> GetSquadAffiliations(List<SquadMember> members);
+        IEnumerable<Affiliation> GetSquadAffiliations(IEnumerable<SquadMember> members);
     }
 }

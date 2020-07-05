@@ -226,7 +226,7 @@ namespace McpSquadBuilder.Core.Tests
                                     IsLeader = false,
                                     McpCharacter = new McpCharacter
                                     {
-                                        Name = "Modok",
+                                        Name = "M.O.D.O.K.",
                                         PointCost = 5,
                                         AlterEgo = "George Tarleton",
                                         InfinityGems = new InfinityGem[0],
