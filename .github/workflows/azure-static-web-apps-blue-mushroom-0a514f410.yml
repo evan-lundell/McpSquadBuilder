@@ -22,6 +22,8 @@ jobs:
         uses: actions/setup-dotnet@v1.5.0
         with:
           dotnet-version: 3.1.301
+      - name: Test app
+        run: dotnet test
       - name: Build app
         run: dotnet publish -c Release -o published
       - name: Build And Deploy
